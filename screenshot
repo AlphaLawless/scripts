@@ -1,0 +1,41 @@
+#!/bin/sh
+
+TIME=3000
+
+usage() {
+    cat <<EOF
+
+usage: ${0##*/} [option]
+
+    Options:
+
+    --area, -a                Take a full screnshot.
+    --clipboard, -c           Directly saves a print to the clipboard.
+    --save, -s                Save a window or area of your choice.
+
+EOF
+}
+usage
+
+if [[ -n $1 ]]; then
+    case $1 in
+        --area | -a)
+            maim -u | xclip -sel clipboard -t image/png &&
+            notify-send -u low -t $TIME 'Cheese =^-^=' 'Screenshot has been put on the clipboard'
+
+        ;;
+        --clipboard | -c)
+            maim -u -s | xclip -sel clipboard -t image/png &&
+            notify-send -u low -t $TIME 'Cheese =^-^=' 'Screenshot has been put on the clipboard'
+        ;;
+        --save | -s)
+            maim ~/Pictures/$(date +%Y-%m-%d-%H-%M-%S)-screenshot.png -s &&
+            notify-send -u low -t $TIME 'Cheese =^-^=' 'Screenshot has been saved on ~/Pictures'
+        ;;
+        *)
+            echo "Usage: $0 [option]"
+        ;;
+    esac
+fi
+
+exit 0

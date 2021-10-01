@@ -1,0 +1,12 @@
+#!/bin/sh
+# A script that will tell you when your battery needs to be recharged using Dunst.
+# @Author: Terminal Root
+
+LEVEL=$(cat /sys/class/power_supply/BAT1/capacity)
+STATUS=$(cat /sys/class/power_supply/BAT1/status)
+
+if [[ $LEVEL -lt 53 ]] ; then
+        if [[ "$STATUS" == "Discharging" ]]; then
+          notify-send --urgency=critical --icon=battery-caution "Low battery ${LEVEL}%" "Discharging!"
+        fi
+fi
