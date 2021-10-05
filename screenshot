@@ -1,4 +1,6 @@
 #!/bin/sh
+# A script that take a screenshot for you (=^⁻^⁼)
+# @Authors: AlphaLawless and Garoze.
 
 TIME=3000
 
