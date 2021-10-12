@@ -9,7 +9,8 @@ To run the scripts in the terminal, give `chmod` permissions, if the script need
 ```sh
 chmod +x [name]
 ```
-Move to `/usr/bin` now:
+Move to `/usr/bin/` or `/usr/local/bin/` now:
 ```sh
-sudo mv -v [name] /usr/bin
+sudo mv -v [name] /usr/bin/
+#sudo mv -v [name] /usr/local/bin/
 ```
