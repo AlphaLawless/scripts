@@ -15,6 +15,9 @@ For [color-gpick script](../color-gpick)
 For [nmd script](../nmd)
 - [networkmanager-dmenu](https://github.com/firecat53/networkmanager-dmenu)
 
+For [screencast](../screencast)
+- [ffmpeg](https://ffmpeg.org)
+
 For [screenshot](../screenshot)
 - [maim](https://github.com/naelstrof/maim)
 
