@@ -3,6 +3,9 @@
   <img src="./screenshot.png" alt="Text: Scripts for Linux" width="800">
 </p>
 
+## Dependencies
+Some scripts need dependencies, [see the list here](./dependencies.md).
+
 ## Install
 
 To run the scripts in the terminal, give `chmod` permissions, if the script needs:
